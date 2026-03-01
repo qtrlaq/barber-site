@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black District Barber</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">BLACK DISTRICT</div>
+  <nav class="desktop-nav">
+    <a href="#">About</a>
+    <a href="#services">Services</a>
+    <a href="#">Barbers</a>
+    <a href="#" class="nav-cta">Book</a>
+  </nav>
+  <a href="#" class="mobile-book">BOOK</a>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>CUTS<br>WITH INTENT.</h1>
+    <p>Precision grooming for modern men.</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn primary">BOOK SESSION</a>
+      <a href="#" class="btn outline">VIEW SERVICES</a>
+    </div>
+  </div>
+</section>
+<section class="about">
+  <div class="section-number">02</div>
+
+  <div class="about-content">
+    <h2>Discipline Over Trend</h2>
+
+    <p>
+      We don’t chase fashion. We refine structure.
+      Every cut is calculated. Every detail intentional.
+      No shortcuts. No compromises.
+    </p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-number">01</div>
+  <h2>Services</h2>
+
+  <div class="service-list">
+    <div class="service-item">
+      <span>HAIRCUT</span>
+      <span>$40</span>
+    </div>
+
+    <div class="service-item">
+      <span>BEARD SCULPT</span>
+      <span>$35</span>
+    </div>
+
+    <div class="service-item">
+      <span>HOT TOWEL SHAVE</span>
+      <span>$30</span>
+    </div>
+  </div>
+</section>
+<section class="booking">
+  <div class="section-number">03</div>
+
+  <h2>Book Your Session</h2>
+
+  <form class="booking-form" id="bookingForm">
+    
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text"  name="name">
+    </div>
+
+    <div class="form-group">
+      <label>Phone</label>
+      <input type="tel" name="phone" required>
+    </div>
+
+    <div class="form-group">
+      <label>Service</label>
+      <select  name="service" required>
+        <option value="" selected disabled>Select service</option>
+        <option value="Haircut">Haircut</option>
+        <option value="Beard Sculpt">Beard Sculpt</option>
+        <option value="Hot Towel Shave">Hot Towel Shave</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" name="date">
+    </div>
+
+    <button type="submit" class="btn primary">CONFIRM BOOKING</button>
+
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Black District Barber</p>
+</footer>
+
+</body>
+<div class="success-overlay">
+  <div class="success-box">
+    <h2>Booking Confirmed</h2>
+    <p>Our barber will contact you shortly.</p>
+    <button onclick="closeSuccess()">Close</button>
+  </div>
+</div>
+
+<script>
+function closeSuccess() {
+  document.querySelector(".success-overlay").classList.remove("active");
+}
+</script>
+</html>
