@@ -470,3 +470,11 @@ html {
   border: none;
   cursor: pointer;
 }
+.form-group select {
+  background: #111;
+  color: #fff;
+}
+select option {
+  background: #fff;
+  color: #000;
+}

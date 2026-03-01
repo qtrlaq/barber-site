@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Black District Barber</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -17,10 +19,9 @@
   <nav class="desktop-nav">
     <a href="#">About</a>
     <a href="#services">Services</a>
-    <a href="#">Barbers</a>
-    <a href="#" class="nav-cta">Book</a>
+    <a href="#booking" class="nav-cta">Book</a>
   </nav>
-  <a href="#" class="mobile-book">BOOK</a>
+  <a href="#booking" class="mobile-book">BOOK</a>
 </header>
 
 <section class="hero">
@@ -28,8 +29,8 @@
     <h1>CUTS<br>WITH INTENT.</h1>
     <p>Precision grooming for modern men.</p>
     <div class="hero-buttons">
-      <a href="#" class="btn primary">BOOK SESSION</a>
-      <a href="#" class="btn outline">VIEW SERVICES</a>
+      <a href="#booking" class="btn primary">BOOK SESSION</a>
+      <a href="#services" class="btn outline">VIEW SERVICES</a>
     </div>
   </div>
 </section>
@@ -68,7 +69,7 @@
     </div>
   </div>
 </section>
-<section class="booking">
+<section class="booking" id="booking">
   <div class="section-number">03</div>
 
   <h2>Book Your Session</h2>
@@ -97,7 +98,7 @@
 
     <div class="form-group">
       <label>Date</label>
-      <input type="date" name="date">
+      <input type="text" id="datePicker" name="date" placeholder="Select date" required>
     </div>
 
     <button type="submit" class="btn primary">CONFIRM BOOKING</button>
@@ -110,6 +111,14 @@
 </footer>
 
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  flatpickr("#datePicker", {
+    dateFormat: "d.m.Y",
+    minDate: "today"
+  });
+});
+</script>
 <div class="success-overlay">
   <div class="success-box">
     <h2>Booking Confirmed</h2>
